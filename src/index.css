@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary colors */
+  --color-primary: #ba9eff;
+  --color-primary-dim: #8455ef;
+  --color-primary-fixed: #ae8dff;
+  --color-primary-fixed-dim: #a27cff;
+  --color-on-primary: #39008c;
+  --color-on-primary-fixed: #000000;
+  --color-on-primary-fixed-variant: #370086;
+  --color-primary-container: #ae8dff;
+  --color-on-primary-container: #2b006e;
+  
+  /* Secondary colors */
+  --color-secondary: #53ddfc;
+  --color-secondary-dim: #40ceed;
+  --color-secondary-fixed: #65e1ff;
+  --color-secondary-fixed-dim: #48d4f3;
+  --color-on-secondary: #004b58;
+  --color-on-secondary-fixed: #003a45;
+  --color-on-secondary-fixed-variant: #005969;
+  --color-secondary-container: #00687a;
+  --color-on-secondary-container: #ecfaff;
+  
+  /* Tertiary colors */
+  --color-tertiary: #ff86c3;
+  --color-tertiary-dim: #f271b5;
+  --color-tertiary-fixed: #ff8bc5;
+  --color-tertiary-fixed-dim: #f976ba;
+  --color-on-tertiary: #5f003e;
+  --color-on-tertiary-fixed: #360021;
+  --color-on-tertiary-fixed-variant: #73004b;
+  --color-tertiary-container: #f673b7;
+  --color-on-tertiary-container: #4a002f;
+  
+  /* Error colors */
+  --color-error: #ff6e84;
+  --color-error-dim: #d73357;
+  --color-on-error: #490013;
+  --color-error-container: #a70138;
+  --color-on-error-container: #ffb2b9;
+  
+  /* Surface colors */
+  --color-background: #060e20;
+  --color-surface: #060e20;
+  --color-surface-dim: #060e20;
+  --color-surface-bright: #1f2b49;
+  --color-surface-container: #0f1930;
+  --color-surface-container-low: #091328;
+  --color-surface-container-high: #141f38;
+  --color-surface-container-highest: #192540;
+  --color-surface-container-lowest: #000000;
+  --color-on-surface: #dee5ff;
+  --color-on-surface-variant: #a3aac4;
+  
+  /* Outline & Inverse */
+  --color-outline: #6d758c;
+  --color-outline-variant: #40485d;
+  --color-inverse-surface: #faf8ff;
+  --color-inverse-on-surface: #4d556b;
+  --color-inverse-primary: #6e3bd7;
+  --color-surface-tint: #ba9eff;
+  
+  /* Font families */
+  --font-family-headline: "Space Grotesk", sans-serif;
+  --font-family-body: "Manrope", sans-serif;
+  --font-family-label: "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-on-surface);
+    font-family: var(--font-family-body);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background-color: color-mix(in srgb, var(--color-surface-container-highest) 60%, transparent);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .primary-gradient {
+    background: linear-gradient(135deg, var(--color-primary-dim), var(--color-primary));
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(132, 85, 239, 0.15);
+  }
+}
