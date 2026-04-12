@@ -2,8 +2,9 @@ import axios from 'axios';
 
 const isDevelopment = import.meta.env.MODE == 'development' 
 
-const myBaseURL = isDevelopment ? import.meta.env.VITE_API_BASE_URL :import.meta.env.VITE_API_BASE_DEPLOY
-
+const myBaseURL = isDevelopment
+  ? import.meta.env.VITE_API_BASE_URL
+  : import.meta.env.VITE_API_BASE_DEPLOY;
 const axiosInstance = axios.create({
   baseURL: myBaseURL,
   timeout: 10000,
