@@ -2,11 +2,12 @@ import axios from 'axios';
 
 const isDevelopment = import.meta.env.MODE == 'development' 
 
-const myBaseURL = isDevelopment
-  ? import.meta.env.VITE_API_BASE_URL
-  : import.meta.env.VITE_API_BASE_DEPLOY;
+// const myBaseURL = isDevelopment
+//   ? import.meta.env.VITE_API_BASE_URL
+//   : import.meta.env.VITE_API_BASE_DEPLOY;
+const mybaseURL = '"https://AbinrDasan.pythonanywhere.com/api/"'
 const axiosInstance = axios.create({
-  baseURL: myBaseURL,
+  baseURL: ,
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
