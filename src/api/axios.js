@@ -7,7 +7,7 @@ const isDevelopment = import.meta.env.MODE == 'development'
 //   : import.meta.env.VITE_API_BASE_DEPLOY;
 const mybaseURL = '"https://AbinrDasan.pythonanywhere.com/api/"'
 const axiosInstance = axios.create({
-  baseURL: ,
+  baseURL: mybaseURL,
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
